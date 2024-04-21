@@ -415,11 +415,11 @@
     navigator.clipboard.writeText(email)
       .then(function() {
         // 复制成功，弹出提示框
-        alert("已复制Email: " + email);
+        alert("Email copied: " + email);
       })
       .catch(function(error) {
         // 复制失败，处理错误
-        console.error("复制失败:", error);
+        console.error("Copy failed:", error);
       });
   });
 });
