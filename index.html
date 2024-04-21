@@ -379,7 +379,7 @@
 
                <a href="https://www.linkedin.com/in/yizhuohu/"><img class="bilinkedin-icon" loading="lazy" alt="" src="./public/bilinkedin.svg" /></a>
 
-              <a href=""> <img class="bienvelope-fill-icon" loading="lazy" alt="" src="./public/bienvelopefill.svg" /></a>
+              <button id="copyButton"> <img class="bienvelope-fill-icon" loading="lazy" alt="" src="./public/bienvelopefill.svg" /></button>
             </div>
             <div class="yizhuo-hu-2024-wrapper">
               <div class="yizhuo-hu-2024">Yizhuo Hu 2024</div>
@@ -402,6 +402,27 @@
         }
       });
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+  // 获取SVG图像和按钮元素
+  var emailImage = document.getElementById("emailImage");
+  var copyButton = document.getElementById("copyButton");
+
+  // 添加按钮点击事件处理函数
+  copyButton.addEventListener("click", function() {
+    // 复制Email地址到剪贴板
+    var email = "a984792631@gmail.com"; // 这里替换成你的Email地址
+    navigator.clipboard.writeText(email)
+      .then(function() {
+        // 复制成功，弹出提示框
+        alert("已复制Email: " + email);
+      })
+      .catch(function(error) {
+        // 复制失败，处理错误
+        console.error("复制失败:", error);
+      });
+  });
+});
   </script>
 </body>
 
